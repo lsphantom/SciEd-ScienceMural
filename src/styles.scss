@@ -1,1 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+$white: #fff;
+$black: #000;
+
+body {
+    font-family: /*'Franklin Gothic Medium', */'Arial Narrow', Arial, sans-serif;
+    background-image: url(assets/images/background-2.jpg);
+}
+
+#master-container {
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+}
+
+#sidebar {
+    position: absolute;
+    float: left;
+    height: 98%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-width: 260px;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+#mural-content {
+    position: relative;
+    float: none;
+    height: 100%;
+    width: 1200px;
+    text-align: center;
+    margin: 0px auto;
+}
+
+#mural-background {
+    /*max-height: 1080px;*/
+    margin: 20px auto;
+    max-height: 1000px;
+}
+
+#footer {
+    position: absolute;
+    float: right;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 98%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    max-width: 260px;
+    text-align: center;
+    color: $white;
+    border: 2px solid $white;
+    border-radius: 15px;
+    padding: 10px;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#84b58a+0,8eb92a+50,72aa00+51,1c5d25+100 */
+background: rgb(132,181,138); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(132,181,138,1) 0%, rgba(142,185,42,1) 50%, rgba(114,170,0,1) 51%, rgba(28,93,37,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(132,181,138,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(28,93,37,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(132,181,138,1) 0%,rgba(142,185,42,1) 50%,rgba(114,170,0,1) 51%,rgba(28,93,37,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#84b58a', endColorstr='#1c5d25',GradientType=0 ); /* IE6-9 */
+}
+
+
+/* INFOBOX */
+#infobox {
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    padding-top: 75px;
+    color: $white;
+    text-align: center;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+#info-row {
+    margin-bottom: 40px;
+}
+.info-title {
+    font-size: 45px;
+    margin-bottom: 50px;
+}
+.info-content {
+    font-size: 24px;
+    font-weight: normal;
+    text-align: left;
+}
+.info-image img {
+    /*max-width: 640px;*/
+}
+.info-back-btn {
+    color: $white;
+    font-size: 28px;
+    padding: 10px 60px;
+    margin: 40px;
+    background-color: $black;
+    border: 2px solid $white;
+    text-decoration: none;
+}
