@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { MdataService } from '../mdata.service';
 
 @Component({
@@ -10,9 +10,7 @@ export class ContentComponent implements OnInit {
 
   constructor(private mdata:MdataService) { }
 
-  passIndex(i){
-    
-  }
+  @Output() update = new EventEmitter();
 
   ngOnInit() {
   }

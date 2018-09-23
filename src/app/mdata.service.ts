@@ -5,9 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MdataService {
 
-  passIndex(i){
-    console.log(i);
-  }
+  currentIndex = 0
 
   hotspots = 
   [

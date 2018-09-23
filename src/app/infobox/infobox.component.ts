@@ -9,15 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class InfoboxComponent implements OnInit {
 
-  @Input('i') index:number;
+  @Input() index:number;
 
   constructor(private mdata:MdataService, _ActivatedRout:ActivatedRoute) { }
 
   hotbox:number;
 
+  onUpdate(input) {
+    this.hotbox = input
+  } 
 
   ngOnInit() {
-    this.hotbox = 9
+    this.hotbox = 0
+    this.onUpdate(event.target.id)
   }
 
 }
