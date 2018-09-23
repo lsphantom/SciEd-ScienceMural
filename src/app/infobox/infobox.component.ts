@@ -15,13 +15,13 @@ export class InfoboxComponent implements OnInit {
 
   hotbox:number;
 
-  onUpdate(input) {
-    this.hotbox = input
+  onUpdate(event) {
+    this.hotbox = event.target.id
   } 
 
   ngOnInit() {
     this.hotbox = 0
-    this.onUpdate(event.target.id)
+    this.onUpdate(event)
   }
 
 }
