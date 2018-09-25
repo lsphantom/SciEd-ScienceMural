@@ -15,6 +15,7 @@ export class InfoboxComponent implements OnInit {
 
   hotbox:number;
 
+
   onUpdate(event) {
     this.hotbox = event.target.id
   } 
