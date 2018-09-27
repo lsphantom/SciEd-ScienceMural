@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
@@ -14,7 +16,7 @@ import { MuralComponent } from './mural/mural.component';
 const appRoutes: Routes = [
   {path:'', component:MuralComponent},
   {path:'screensaver', component:ScreensaverComponent},
-  {path:'info', component:InfoboxComponent, data: {index: 15}}
+  {path:'info', component:InfoboxComponent}
 ] 
 
 
@@ -30,7 +32,8 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    BrowserAnimationsModule
   ],
   providers: [{provide: 'mdata', useClass:MdataService}],
   bootstrap: [AppComponent]

@@ -3,7 +3,8 @@ $white: #fff;
 $black: #000;
 
 body {
-    font-family: /*'Franklin Gothic Medium', */'Arial Narrow', Arial, sans-serif;
+    /*font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;*/
+    font-family: 'Montserrat', sans-serif;
     background-image: url(assets/images/background-2.jpg);
 }
 
@@ -89,9 +90,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     margin-bottom: 50px;
 }
 .info-content {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.4;
 }
 .info-image img {
     /*max-width: 640px;*/
