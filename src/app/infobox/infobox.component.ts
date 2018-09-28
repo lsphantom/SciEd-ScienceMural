@@ -1,44 +1,36 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MdataService } from '../mdata.service'; 
-import { ActivatedRoute } from '@angular/router';
-import { trigger, transition, state, style, animate } from '@angular/animations';
+import { Router, ActivatedRoute } from '@angular/router';
+import { fade, slideToLeft, slideToRight } from '../animations';
+
 
 @Component({
   selector: 'app-infobox',
   templateUrl: './infobox.component.html',
   styleUrls: ['./infobox.component.scss'],
   animations: [
-    trigger('fade', [
-      state('void', style({opacity:0})),
-      transition(':enter, :leave', [
-        animate(500)
-      ])
-    ]),
-
-    trigger('slideToLeft', [
-      state('void', style({transform: 'translateX(20px)'})),
-      transition(':enter, :leave', [
-        animate(500)
-      ])
-    ])
+    fade,
+    slideToLeft,
+    slideToRight
   ]
 })
 export class InfoboxComponent implements OnInit {
 
   @Input() index:number;
 
-  constructor(private mdata:MdataService, _ActivatedRout:ActivatedRoute) { }
+  constructor(private mdata:MdataService, _ActivatedRout:ActivatedRoute, private router:Router) { }
 
-  hotbox:number;
+  hotbox:any;
 
 
-  onUpdate(event) {
-    this.hotbox = event.target.id
+  onUpdate(item) {
+    this.hotbox = item
   } 
 
   ngOnInit() {
-    this.hotbox = 0
-    this.onUpdate(event)
+    let fullRoute = this.router.url;
+    let currentUrl = fullRoute.substr(6, fullRoute.length);
+    this.onUpdate(currentUrl);
   }
 
 }

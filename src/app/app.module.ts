@@ -16,7 +16,7 @@ import { MuralComponent } from './mural/mural.component';
 const appRoutes: Routes = [
   {path:'', component:MuralComponent},
   {path:'screensaver', component:ScreensaverComponent},
-  {path:'info', component:InfoboxComponent}
+  {path:'info/:id', component:InfoboxComponent}
 ] 
 
 

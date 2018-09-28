@@ -1,12 +1,12 @@
 <div id="infobox" (update)="onUpdate($event, $event.name)">
   <div class="container">
-  <h1 class="info-title">{{mdata.descriptions[hotbox].title}}</h1>
+  <h1 @fade class="info-title">{{mdata.descriptions[hotbox].title}}</h1>
   <div id="info-row" class="row">
   <div @fade @slideToLeft class="info-image col-sm-6">
     <img class="img-responsive" src="assets/{{mdata.descriptions[hotbox].image_path}}" >
   </div>
-  <div @fade ng-repeat="description in descriptions" class="info-content col-sm-6">
-      <p>{{mdata.descriptions[hotbox].text}}</p>
+  <div @fade @slideToRight ng-repeat="description in descriptions" class="info-content col-sm-6">
+      <p [innerHTML]="mdata.descriptions[hotbox].text"></p>
   </div>
   </div>
   <a class="info-back-btn" routerLink="/">Back</a>

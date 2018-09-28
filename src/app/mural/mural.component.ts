@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { fade, slideToLeft, slideToRight } from '../animations';
 
 @Component({
   selector: 'app-mural',

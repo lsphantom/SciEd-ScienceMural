@@ -1,11 +1,11 @@
 <div id="mural-content">
-<img id="mural-background" src="assets/images/mural_large.png" class="img-responsive" height="100%" usemap="#Mural">
+<img @fade @zoomOutMural id="mural-background" src="assets/images/mural_large.png" class="img-responsive" height="100%" usemap="#Mural">
     <map name="Mural">
         <area *ngFor="let hotspot of mdata.hotspots; let i = index"
             id="{{hotspot.description}}" shape="rect" alt="{{mdata.descriptions[hotspot.description].title}}"
             coords="{{hotspot.location.x}},{{hotspot.location.y}},{{hotspot.location.x + hotspot.location.width}},{{hotspot.location.y + hotspot.location.height}}"
             (click)="update.emit({id: i})"
-            routerLink="/info"
+            routerLink="/info/{{hotspot.description}}"
             draggable="false" onmousedown="return false">
     </map>
 </div>
