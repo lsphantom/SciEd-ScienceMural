@@ -5,6 +5,7 @@
             id="{{hotspot.description}}" shape="rect" alt="{{mdata.descriptions[hotspot.description].title}}"
             coords="{{hotspot.location.x}},{{hotspot.location.y}},{{hotspot.location.x + hotspot.location.width}},{{hotspot.location.y + hotspot.location.height}}"
             (click)="update.emit({id: i})"
-            routerLink="/info">
+            routerLink="/info"
+            draggable="false" onmousedown="return false">
     </map>
 </div>
