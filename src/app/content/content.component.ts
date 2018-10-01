@@ -13,7 +13,7 @@ import { fade, zoomOutMural } from '../animations';
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private mdata:MdataService) { }
+  constructor(public mdata:MdataService) { }
 
   @Output() update = new EventEmitter();
 

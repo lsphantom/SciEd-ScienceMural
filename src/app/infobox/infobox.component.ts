@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MdataService } from '../mdata.service'; 
 import { Router, ActivatedRoute } from '@angular/router';
 import { fade, slideToLeft, slideToRight } from '../animations';
@@ -16,12 +16,9 @@ import { fade, slideToLeft, slideToRight } from '../animations';
 })
 export class InfoboxComponent implements OnInit {
 
-  @Input() index:number;
-
-  constructor(private mdata:MdataService, _ActivatedRout:ActivatedRoute, private router:Router) { }
+  constructor(public mdata:MdataService, _ActivatedRout:ActivatedRoute, private router:Router ) { }
 
   hotbox:any;
-
 
   onUpdate(item) {
     this.hotbox = item
