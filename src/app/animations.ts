@@ -27,3 +27,11 @@ export let fade = trigger('fade', [
       animate(500)
     ])
   ]); 
+
+  //SCREENSAVER ANIMATIONS
+  export let infiniteFade = trigger('infiniteFade', [
+    state('void', style({ opacity: 0 })),
+    transition('* <=> *', [
+     animate(10000)
+    ])
+ ]);

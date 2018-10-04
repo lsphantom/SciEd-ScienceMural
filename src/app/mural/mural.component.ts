@@ -7,10 +7,12 @@ import { fade, slideToLeft, slideToRight } from '../animations';
   styleUrls: ['./mural.component.scss']
 })
 export class MuralComponent implements OnInit {
-
   constructor() { }
 
+
+
   ngOnInit() {
+    
   }
 
 }

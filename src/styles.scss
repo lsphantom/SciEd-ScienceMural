@@ -148,3 +148,17 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     color: #c43634;
     font-size: 85px;
 }
+#screensaver h2 {
+    text-align: center;
+    color: #f68f1e;
+}
+
+#screensaver a:hover {
+    color: $white;
+    text-decoration: none;
+}
+
+.screensaver-box {
+    width: 500px;
+    position: fixed;
+}
