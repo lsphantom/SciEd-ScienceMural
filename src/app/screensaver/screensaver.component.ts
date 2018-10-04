@@ -18,6 +18,7 @@ export class ScreensaverComponent implements OnInit {
 
   constructor(public mdata:MdataService, private userIdle: UserIdleService, private router: Router) { }
 
+  state:any;
   picture:string;
   newTop:number;
   newLeft:number;
